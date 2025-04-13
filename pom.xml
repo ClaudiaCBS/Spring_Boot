@@ -60,7 +60,13 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-	</dependencies>
+	
+   <dependency>
+     <groupId>org.proyecto-adalid</groupId>
+     <artifactId>adalid-alfa</artifactId>
+     <version>6.1.0</version>
+   </dependency>
+ </dependencies>
 
 	<build>
 		<plugins>
