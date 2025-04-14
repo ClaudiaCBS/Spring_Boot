@@ -17,12 +17,14 @@ public class TrabalhoService {
     @Autowired
     private TrabalhoRepository repo;
 
+    // Metodo para listar todos os registros da tabela
     public List<Trabalho> buscarTodos(){
 
         return repo.findAll();
         
     }
 
+    // Metodo para cadastro
     public Trabalho novo(Trabalho trabalho){
 
         if(trabalho.getTitulo() == null ||
@@ -37,6 +39,7 @@ public class TrabalhoService {
             return repo.save(trabalho);
     }
 
+    // Metodo para buscar usando a consulta criada no repository
     public List<Trabalho> buscarPorTituloENota(String titulo, Integer nota){
         return repo.findByTituloContainsAndNotaGreaterThan(titulo, nota);
     }
